@@ -1,16 +1,19 @@
-// Programmer Diktor layout, by Plotnikov Anton <plotnikovanton@gmail.com>.
-// It is combination of Diktor and Programmer Dvorak layouts. The main idea
-// was to bring up natural symbols mapping of Programmer Dvorak layout to
-// russian Diktor layout.
-// License: MIT
 partial alphanumeric_keys
 xkb_symbols "diktor" {
     include "ru(common)"
     name[Group1]= "Diktor";
 
-
     // symbols row, left side
     key <TLDE> { [ Cyrillic_io, Cyrillic_IO,    dollar, asciitilde  ] };
+    
+    key <AE01> { [           1,    Cyrillic_HARDSIGN  ] };
+    key <AE02> { [           2,    Cyrillic_SOFTSIGN  ] };
+    key <AE03> { [           3, numerosign  ] };
+    key <AE04> { [           4,    percent  ] };
+    key <AE05> { [           5,      colon  ] };
+    key <AE06> { [           6,  semicolon  ] };
+    key <AE07> { [           7,      minus  ] };
+    key <AE08> { [           8,   quotedbl  ] };
 
     // top row
     key	<AD01> { [	Cyrillic_tse,       Cyrillic_TSE,       semicolon,          colon               ] };
@@ -48,8 +51,9 @@ xkb_symbols "diktor" {
     key	<AB06> { [	Cyrillic_be,	Cyrillic_BE	                            ] };
     key	<AB07> { [	Cyrillic_em,	Cyrillic_EM	                            ] };
     key	<AB08> { [	Cyrillic_pe,	Cyrillic_PE	                            ] };
-    key	<AB09> { [	Cyrillic_ghe,	Cyrillic_GHE	                        ] };
-    key	<AB10> { [	Cyrillic_zhe,	Cyrillic_ZHE	                        ] };
+    key	<AB09> { [	Cyrillic_zhe,	Cyrillic_ZHE	                        ] };
+    key	<AB10> { [	Cyrillic_ghe,	Cyrillic_GHE	                        ] };
+    
 
     include "level3(ralt_switch)"
     include "kpdl(comma)"
