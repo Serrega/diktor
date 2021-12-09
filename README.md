@@ -14,5 +14,5 @@ variant. You can use it like `setxkbmap prog,prog dvorak,diktor`.
 
 It is combination of us Programmer Dvorak and Russian Diktor layout.
 
-![Diktor](https://raw.githubusercontent.com/pltanton/prog-layouts/master/diktor.png)
+![Diktor](https://raw.githubusercontent.com/Serrega/prog-layouts/master/diktor.png)
 
