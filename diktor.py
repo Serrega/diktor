@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
     if ind := content.index('! variant\n'):
         try: 
-            content.index(diktor_variant):
+            content.index(diktor_variant)
         except ValueError:
             content.insert(ind + 1, diktor_variant)
             try:
