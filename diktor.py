@@ -10,9 +10,9 @@ if __name__ == '__main__':
         print('file open error', be)
 
     if ind := content.index('! variant\n'):
-        if content.index(diktor_variant):
-            print('diktor_variant just is in evdev.lst')
-        else:
+        try: 
+            content.index(diktor_variant):
+        except ValueError:
             content.insert(ind + 1, diktor_variant)
             try:
                 with open('/usr/share/X11/xkb/rules/evdev.tmp', 'a') as file_a:
@@ -21,6 +21,9 @@ if __name__ == '__main__':
                 print('file write error', be)
             os.rename('/usr/share/X11/xkb/rules/evdev.lst', '/usr/share/X11/xkb/rules/evdev.lst.old')
             os.rename('/usr/share/X11/xkb/rules/evdev.tmp', '/usr/share/X11/xkb/rules/evdev.lst')
+        else:
+            print('diktor_variant just is in evdev.lst')
+            
     else:
         print('! variant not found')
 
